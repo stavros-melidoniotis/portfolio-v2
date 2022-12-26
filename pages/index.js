@@ -13,12 +13,12 @@ export default function Home() {
       </Head>
 
       <main className="relative max-w-[1440px] flex justify-between gap-8 mx-auto">
-        <div className="fixed top-0 left-0 w-full h-12 pointer-events-none bg-gradient-to-b from-black to-transparent z-20"></div>
+        <div className="fixed top-0 left-0 w-full h-16 pointer-events-none bg-gradient-to-b from-black to-transparent z-20"></div>
 
         <LeftColumn />
         <RightColumn />
 
-        <div className="fixed bottom-0 left-0 w-full h-12 pointer-events-none bg-gradient-to-t from-black to-transparent z-20"></div>
+        <div className="fixed bottom-0 left-0 w-full h-16 pointer-events-none bg-gradient-to-t from-black to-transparent z-20"></div>
       </main>
     </>
   );

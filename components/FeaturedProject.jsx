@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faCodeFork } from "@fortawesome/free-solid-svg-icons";
 
 const FeaturedProject = ({
   title,
@@ -10,7 +12,7 @@ const FeaturedProject = ({
 }) => {
   return (
     <Link
-      className="rounded-lg w-full bg-gradient-to-r p-1 from-[#FF0F7B] via-[#FB5651] to-[#F89B29] hover:scale-110 transition-all duration-300 ease-in-out"
+      className="rounded-lg w-full bg-gradient-to-r p-1 from-[#FF0F7B] via-[#FB5651] to-[#F89B29] hover:scale-110 transition-all duration-500 ease-in-out"
       href={link}
       target="_blank"
     >
@@ -26,8 +28,16 @@ const FeaturedProject = ({
 
           <div className="flex gap-4 text-light-gray">
             {language}
-            {stars > 0 ? <span>Stars {stars}</span> : null}
-            {forks > 0 ? <span>Forks {forks} </span> : null}
+            {stars > 0 ? (
+              <span>
+                <FontAwesomeIcon icon={faStar} /> {stars}
+              </span>
+            ) : null}
+            {forks > 0 ? (
+              <span>
+                <FontAwesomeIcon icon={faCodeFork} /> {forks}
+              </span>
+            ) : null}
           </div>
         </div>
       </div>

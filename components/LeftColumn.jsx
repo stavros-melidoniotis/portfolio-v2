@@ -1,9 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+
 import NavMenu from "./NavMenu";
 import styles from "../styles/LeftColumn.module.css";
 
 import me from "../assets/images/me.webp";
-import Link from "next/link";
 
 const LeftColumn = () => {
   return (
@@ -34,7 +38,9 @@ const LeftColumn = () => {
             <Link
               href="https://github.com/stavros-melidoniotis"
               target="_blank"
+              className="flex items-center gap-2"
             >
+              <FontAwesomeIcon icon={faGithub} />
               Github
             </Link>
           </li>
@@ -43,13 +49,21 @@ const LeftColumn = () => {
             <Link
               href="https://www.linkedin.com/in/stavros-melidoniotis/"
               target="_blank"
+              className="flex items-center gap-2"
             >
+              <FontAwesomeIcon icon={faLinkedinIn} />
               LinkedIn
             </Link>
           </li>
 
           <li>
-            <Link href="mailto:melidon.stavros@gmail.com">Email</Link>
+            <Link
+              href="mailto:melidon.stavros@gmail.com"
+              className="flex items-center gap-2"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+              Email
+            </Link>
           </li>
         </ul>
       </div>
