@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
-import NavMenu from "./NavMenu";
-import styles from "../styles/LeftColumn.module.css";
+import NavMenu from "../NavMenu/NavMenu";
+import styles from "./LeftColumn.module.css";
 
-import me from "../assets/images/me.webp";
+import me from "../../assets/images/me.webp";
 
 const LeftColumn = () => {
   return (
@@ -18,13 +18,12 @@ const LeftColumn = () => {
           <span className={styles.wavyHand}>👋</span>
         </h1>
 
-        <h2 className="text-3xl">Full Stack Developer</h2>
+        <h2 className="text-3xl">I (mostly) make websites.</h2>
 
         <p className="text-light-gray mt-8 mb-12">
-          I would describe myself as a passionate, detail-oriented individual
-          with a get-it-done, on-time and high-quality-product spirit. I&apos;m
-          always keen on learning new stuff and experimenting with new
-          technologies in the areas of Web Development and AI.
+          I&apos;m a full stack developer equipped with the urge to turn ideas
+          into exceptional digital experiences. Currently, I&apos;m focused on
+          building accessible, human-centered products at Crowdpolicy.
         </p>
 
         <NavMenu />

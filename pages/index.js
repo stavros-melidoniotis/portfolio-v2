@@ -1,6 +1,6 @@
 import Head from "next/head";
-import LeftColumn from "../components/LeftColumn";
-import RightColumn from "../components/RightColumn";
+import LeftColumn from "../components/LeftColumn/LeftColumn";
+import RightColumn from "../components/RightColumn/RightColumn";
 
 export default function Home() {
   return (

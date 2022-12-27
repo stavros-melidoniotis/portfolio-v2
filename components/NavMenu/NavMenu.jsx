@@ -14,8 +14,7 @@ const NavItem = ({ to, label }) => {
 const NavMenu = () => {
   return (
     <nav className="flex flex-col gap-4">
-      <NavItem to="#" label="Home" />
-      <NavItem to="#" label="About me" />
+      <NavItem to="#about-me" label="About me" />
       <NavItem to="#" label="About you" />
       <NavItem to="#" label="Projects" />
     </nav>

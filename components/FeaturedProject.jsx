@@ -16,7 +16,7 @@ const FeaturedProject = ({
       href={link}
       target="_blank"
     >
-      <div className="bg-[#0c0c0c] rounded-md p-6 h-full">
+      <div className="bg-dark-gray rounded-md p-6 h-full">
         <div className="flex flex-col justify-between h-full">
           <div>
             <h4 className="text-lg font-medium w-full text-gray-100 mb-4">
