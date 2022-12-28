@@ -1,3 +1,4 @@
+import Skills from "../Skills/Skills";
 import Timeline from "../Timeline/Timeline";
 
 const AboutMe = () => {
@@ -17,13 +18,15 @@ const AboutMe = () => {
       <Timeline />
 
       <h2 className="mb-4 text-light-gray">
-        Some of the skills that I've acquired from my journey so far:
+        Technical skills (don't worry if a skill is missing – I pick things up
+        pretty quick):
       </h2>
+
+      <Skills />
 
       <p className="text-light-gray">
         I have experience working on a team in an agile environment using
-        Atlassian software, but I also enjoy working independently. Don't worry
-        if a skill is missing – I pick things up pretty quick.
+        Atlassian software, but I also enjoy working independently.
       </p>
     </section>
   );
