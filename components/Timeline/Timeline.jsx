@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const TimelineItem = ({ title, content, date, dotContent }) => {
   return (
-    <li className="mb-10 ml-6">
+    <li className="mb-12 ml-6">
       <span className="flex absolute -left-[7px] mt-5 justify-center items-center w-3 h-3 bg-orange-600 rounded-full ring-8 ring-white">
         {dotContent}
       </span>
@@ -15,7 +15,7 @@ const TimelineItem = ({ title, content, date, dotContent }) => {
           <time className="text-xs font-normal text-light-gray">{date}</time>
         </div>
 
-        <div className="text-sm font-light border-light-gray text-light-gray rounded-md w-4/5 mt-4">
+        <div className="font-light border-light-gray text-light-gray rounded-md w-4/5 mt-4">
           {content}
         </div>
       </div>
@@ -24,27 +24,45 @@ const TimelineItem = ({ title, content, date, dotContent }) => {
 };
 
 const Timeline = () => {
-  const [countdown, setCountdown] = useState({
+  const [timeAlive, setTimeAlive] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
 
-  const currentDate = new Date();
-  const birthdayDate = new Date(
-    `${
-      currentDate.getMonth() > 6
-        ? currentDate.getFullYear() + 1
-        : currentDate.getFullYear()
-    }-07-15`
-  );
+  const calculateTimeFromDateBorn = () => {
+    const currentDate = new Date().getTime();
+    const birthdayDate = new Date("1998-07-15").getTime();
+    const diff = currentDate - birthdayDate;
 
-  // console.log(new Date(birthdayDate));
+    const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+    const daysms = diff % (24 * 60 * 60 * 1000);
+
+    const hours = Math.floor(daysms / (60 * 60 * 1000));
+    const hoursms = diff % (60 * 60 * 1000);
+
+    const minutes = Math.floor(hoursms / (60 * 1000));
+    const minutesms = diff % (60 * 1000);
+
+    const seconds = Math.floor(minutesms / 1000);
+
+    return { days, hours, minutes, seconds };
+  };
+
+  const pluralize = (count, wordSingle, wordPlural) => {
+    return count > 1 || count === 0
+      ? `${count} ${wordPlural}`
+      : `${count} ${wordSingle}`;
+  };
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeAlive(calculateTimeFromDateBorn());
+    }, 1000);
 
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <ol className="relative border-l-2 border-[#FB5651]">
@@ -53,8 +71,11 @@ const Timeline = () => {
         date="Jul 1998"
         content={
           <p className="mb-2">
-            This is where my story begins. Don't forget to send me your wishes
-            in
+            This is where my story begins, making me{" "}
+            {pluralize(timeAlive.days, "day", "days")},{" "}
+            {pluralize(timeAlive.hours, "hour", "hours")},{" "}
+            {pluralize(timeAlive.minutes, "minute", "minutes")} and{" "}
+            {pluralize(timeAlive.seconds, "second", "seconds")} old.
           </p>
         }
         dotContent="👶"

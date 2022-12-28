@@ -5,15 +5,13 @@ const AboutMe = () => {
     <section id="about-me" className="min-h-screen">
       <p className="text-light-gray mb-8">
         I would describe myself as a passionate, detail-oriented individual with
-        a get-it-done, on-time and high-quality-product spirit. I discovered my
-        passion for programming a few years ago and since then I can't get
-        enough of it. I&apos;m always keen on learning new stuff and
-        experimenting with new technologies in the areas of Web Development and
-        AI.
+        a get-it-done, on-time and high-quality-product spirit. I&apos;m always
+        keen on learning new stuff and experimenting with new technologies in
+        the areas of Web Development and AI.
       </p>
 
-      <h2 className="mb-4 text-light-gray">
-        Here's a glimpse of my story so far:
+      <h2 className="mb-6 text-light-gray">
+        Here are some important milestones in my life so far...
       </h2>
 
       <Timeline />
