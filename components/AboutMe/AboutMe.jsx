@@ -1,9 +1,12 @@
 import Skills from "../Skills/Skills";
 import Timeline from "../Timeline/Timeline";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const AboutMe = () => {
   return (
     <section id="about-me" className="min-h-screen">
+      <SectionTitle title="About me" />
+
       <p className="text-light-gray mb-8">
         I would describe myself as a passionate, detail-oriented individual with
         a get-it-done, on-time and high-quality-product spirit. I&apos;m always
