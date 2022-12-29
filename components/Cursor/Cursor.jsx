@@ -35,9 +35,9 @@ const Cursor = () => {
       <div
         className={styles.ring}
         style={{
-          left: `${mousePosition.x - 24}px`,
-          top: `${mousePosition.y - 24}px`,
-          transform: isMouseDown ? "scale(1.2)" : "scale(1)",
+          left: `${mousePosition.x - 18}px`,
+          top: `${mousePosition.y - 18}px`,
+          transform: isMouseDown ? "scale(1.5)" : "scale(1)",
         }}
       ></div>
 

@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function App({ Component, pageProps }) {
   return (
     <div className={inter.className}>
-      {/* <Cursor /> */}
+      <Cursor />
       <Component {...pageProps} />
     </div>
   );

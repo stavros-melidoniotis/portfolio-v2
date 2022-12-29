@@ -2,14 +2,12 @@
   position: fixed;
   top: 10px;
   left: 20px;
-  width: 48px;
-  height: 48px;
-  border: 2px solid rgba(31, 30, 30, 0.808);
+  width: 35px;
+  height: 35px;
+  border: 2px solid rgba(177, 166, 166, 0.808);
   border-radius: 100%;
   transform: translate(-50%, -50%);
-  /* transition-property: transform; */
-  /* transition-delay: 100ms; */
-  transition-timing-function: ease-out;
+  transition: all 0.125s ease-out;
   z-index: 999;
   pointer-events: none;
 }
