@@ -9,10 +9,11 @@ const FeaturedProject = ({
   stars,
   forks,
   language,
+  languageColor,
 }) => {
   return (
     <Link
-      className="rounded-lg w-full bg-gradient-to-r p-1 from-[#FF0F7B] via-[#FB5651] to-[#F89B29] hover:scale-110 transition-all duration-500 ease-in-out"
+      className="rounded-lg w-full bg-gradient-to-r p-1 from-[#FF0F7B] via-[#FB5651] to-[#F89B29] hover:scale-105 transition-all duration-500 ease-in-out"
       href={link}
       target="_blank"
     >
@@ -27,7 +28,14 @@ const FeaturedProject = ({
           </div>
 
           <div className="flex gap-4 text-light-gray">
-            {language}
+            <div className="flex items-center gap-3">
+              <div
+                className="w-3 h-3 rounded-full"
+                style={{ backgroundColor: languageColor }}
+              ></div>
+              {language}
+            </div>
+
             {stars > 0 ? (
               <span>
                 <FontAwesomeIcon icon={faStar} /> {stars}

@@ -2,7 +2,9 @@ import Head from "next/head";
 import LeftColumn from "../components/LeftColumn/LeftColumn";
 import RightColumn from "../components/RightColumn/RightColumn";
 
-export default function Home() {
+import { getPinnedRepos } from "../lib/github";
+
+export default function Home({ featuredProjects }) {
   return (
     <>
       <Head>
@@ -16,10 +18,20 @@ export default function Home() {
         <div className="fixed top-0 left-0 w-full h-16 pointer-events-none bg-gradient-to-b from-black to-transparent z-20"></div>
 
         <LeftColumn />
-        <RightColumn />
+        <RightColumn featuredProjects={featuredProjects} />
 
         <div className="fixed bottom-0 left-0 w-full h-16 pointer-events-none bg-gradient-to-t from-black to-transparent z-20"></div>
       </main>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const pinnedRepos = await getPinnedRepos();
+
+  return {
+    props: {
+      featuredProjects: pinnedRepos,
+    },
+  };
 }
