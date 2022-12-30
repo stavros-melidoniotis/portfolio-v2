@@ -3,8 +3,9 @@ import LeftColumn from "../components/LeftColumn/LeftColumn";
 import RightColumn from "../components/RightColumn/RightColumn";
 
 import { getPinnedRepos } from "../lib/github";
+import { getNowPlaying } from "../lib/spotify";
 
-export default function Home({ featuredProjects }) {
+export default function Home({ featuredProjects, spotify }) {
   return (
     <>
       <Head>
@@ -17,7 +18,7 @@ export default function Home({ featuredProjects }) {
       <main className="relative max-w-[1440px] flex justify-between gap-8 mx-auto">
         <div className="fixed top-0 left-0 w-full h-16 pointer-events-none bg-gradient-to-b from-black to-transparent z-20"></div>
 
-        <LeftColumn />
+        <LeftColumn spotifyData={spotify} />
         <RightColumn featuredProjects={featuredProjects} />
 
         <div className="fixed bottom-0 left-0 w-full h-16 pointer-events-none bg-gradient-to-t from-black to-transparent z-20"></div>
@@ -27,11 +28,15 @@ export default function Home({ featuredProjects }) {
 }
 
 export async function getServerSideProps() {
-  const pinnedRepos = await getPinnedRepos();
+  const [pinnedRepos, spotify] = await Promise.all([
+    getPinnedRepos(),
+    getNowPlaying(),
+  ]);
 
   return {
     props: {
       featuredProjects: pinnedRepos,
+      spotify,
     },
   };
 }
