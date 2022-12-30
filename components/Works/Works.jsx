@@ -108,7 +108,7 @@ const Works = () => {
     {
       title: "e-services",
       description:
-        "Digital platform through which citizens can submit requests remotely for certifications or other services of their Municipality, following required methodologies and submitting the necessary supporting documents",
+        "Digital platform through which citizens can submit requests remotely for certifications or other services of their Municipality, following required methodologies and submitting the necessary supporting documents.",
       technologies: ["Wordpress", "TaxisNet", "PHP", "Bootstrap"],
       link: "https://egov.crowdapps.net/haidari/",
       thumbnail: eservices,
@@ -127,7 +127,7 @@ const Works = () => {
   });
 
   return (
-    <section id="works" className="min-h-screen mb-12">
+    <section id="works" className="min-h-screen">
       <SectionTitle title="Works" />
 
       <div className="flex flex-col gap-8"> {projects} </div>
