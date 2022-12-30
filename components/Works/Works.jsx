@@ -22,7 +22,7 @@ const Work = ({ title, description, technologies, thumbnail, link }) => {
   });
 
   return (
-    <div className="bg-dark-gray p-6 rounded-lg flex gap-4">
+    <div className="bg-dark-gray p-6 rounded-lg flex flex-col xl:flex-row gap-4">
       <div className="flex flex-col justify-between">
         <div>
           {link ? (
@@ -41,7 +41,7 @@ const Work = ({ title, description, technologies, thumbnail, link }) => {
           <p className="text-light-gray">{description}</p>
         </div>
 
-        <div className="mt-8 text-light-gray text-sm flex gap-3">
+        <div className="mt-8 text-light-gray text-sm flex flex-wrap gap-3">
           {technologiesContent}
         </div>
       </div>
@@ -50,7 +50,7 @@ const Work = ({ title, description, technologies, thumbnail, link }) => {
         width="300"
         src={thumbnail}
         alt={title}
-        className="rounded-xl object-cover"
+        className="rounded-xl object-cover w-full xl:w-[300px]"
       />
     </div>
   );

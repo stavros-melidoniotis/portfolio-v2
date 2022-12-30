@@ -8,7 +8,7 @@ const Cursor = () => {
   useEffect(() => {
     const mouseMoveHandler = (e) => {
       const { clientX, clientY } = e;
-      setMousePosition({ x: clientX, y: clientY});
+      setMousePosition({ x: clientX, y: clientY });
     };
 
     const mouseDownHandler = () => {
@@ -33,7 +33,7 @@ const Cursor = () => {
   return (
     <>
       <div
-        className={styles.ring}
+        className={`${styles.ring} hidden xl:block`}
         style={{
           left: `${mousePosition.x - 18}px`,
           top: `${mousePosition.y - 18}px`,
@@ -42,7 +42,7 @@ const Cursor = () => {
       ></div>
 
       <div
-        className={styles.dot}
+        className={`${styles.dot} hidden xl:block`}
         style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
       ></div>
     </>

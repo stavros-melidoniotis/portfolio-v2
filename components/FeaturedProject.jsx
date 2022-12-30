@@ -13,7 +13,7 @@ const FeaturedProject = ({
 }) => {
   return (
     <Link
-      className="rounded-lg w-full bg-gradient-to-r p-1 from-[#FF0F7B] via-[#FB5651] to-[#F89B29] hover:scale-105 transition-all duration-500 ease-in-out"
+      className="rounded-lg w-full bg-gradient-to-r p-1 from-[#FF0F7B] via-[#FB5651] to-[#F89B29] hover:scale-105 transition-all duration-500 ease-in-out h-64"
       href={link}
       target="_blank"
     >

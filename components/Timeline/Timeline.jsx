@@ -9,13 +9,13 @@ const TimelineItem = ({ title, content, date, dotContent }) => {
       </span>
 
       <div className="flex flex-col justify-between p-4 bg-dark-gray rounded-lg border border-light-gray shadow-sm">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between">
           <h3 className="text-md font-normal">{title}</h3>
 
           <time className="text-xs font-normal text-light-gray">{date}</time>
         </div>
 
-        <div className="font-light border-light-gray text-light-gray rounded-md w-4/5 mt-4">
+        <div className="font-light border-light-gray text-light-gray rounded-md md:w-4/5 mt-4">
           {content}
         </div>
       </div>
@@ -87,12 +87,12 @@ const Timeline = () => {
         content={
           <>
             <p className="mb-2">
-              This was the beginning of a very constructive period, where I got
+              Fast forward to 2016. This was the beginning of a very constructive period, where I got
               to meet lots of professors with great knowledge and start my
               programming journey. Some of the courses that I took include:
             </p>
 
-            <ul className="list-disc columns-2 pl-8">
+            <ul className="list-disc columns-1 md:columns-2 pl-8">
               <li>Object-Oriented Programming</li>
               <li>Android Development </li>
               <li>Web Development </li>

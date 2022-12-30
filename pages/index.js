@@ -16,7 +16,7 @@ export default function Home({ featuredProjects, snippets, spotify }) {
 
       <Cursor />
 
-      <main className="relative max-w-[1440px] flex justify-between gap-8 mx-auto">
+      <main className="relative max-w-[1440px] flex flex-col lg:flex-row justify-between gap-8 mx-auto px-10">
         <div className="fixed top-0 left-0 w-full h-16 pointer-events-none bg-gradient-to-b from-black to-transparent z-20"></div>
 
         <LeftColumn spotifyData={spotify} />
