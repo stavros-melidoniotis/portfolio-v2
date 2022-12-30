@@ -126,7 +126,7 @@ const Timeline = () => {
               While still studying for University I was able to land a freelance
               job at Techville, where I had the opportunity to put my knowledge
               into practise. My main responsibilities involve the error-free
-              operation of the company's website, the implementation of new
+              operation of the company&apos;s website, the implementation of new
               features and the creation of backups.
             </p>
           </>
@@ -171,11 +171,12 @@ const Timeline = () => {
           <>
             <p>
               My first full-time job! This was my chance to make good use of all
-              the skills that I've gained during the previous years. I've
-              participated in numerous projects, either alone or as part of a
-              team, and every single one of them has provided me with even more
-              skills and experience. Apart from writing code I also train new
-              co-workers and guide them through all the initial stages.
+              the skills that I&apos;ve gained during the previous years.
+              I&apos;ve participated in numerous projects, either alone or as
+              part of a team, and every single one of them has provided me with
+              even more skills and experience. Apart from writing code I also
+              train new co-workers and guide them through all the initial
+              stages.
             </p>
           </>
         }
@@ -188,11 +189,11 @@ const Timeline = () => {
         content={
           <>
             <p>
-              The time has come. My thesis project "Develop a Facebook Messenger
-              chatbot that will operate as Harokopio University's undergraduate
-              student advisor" was rated with 10/10, which allowed me to
-              graduate from HUA with a GPA of 8.6/10, the highest grade at this
-              specific graduation ceremony.
+              The time has come. My thesis project &quot;Develop a Facebook
+              Messenger chatbot that will operate as Harokopio University&apos;s
+              undergraduate student advisor&quot; was rated with 10/10, which
+              allowed me to graduate from HUA with a GPA of 8.6/10, the highest
+              grade at this specific graduation ceremony.
             </p>
           </>
         }

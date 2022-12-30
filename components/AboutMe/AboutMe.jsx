@@ -21,7 +21,7 @@ const AboutMe = () => {
       <Timeline />
 
       <h2 className="mb-4 text-light-gray">
-        Technical skills (don't worry if a skill is missing – I pick things up
+        Technical skills (don&apos;t worry if a skill is missing – I pick things up
         pretty quick):
       </h2>
 
