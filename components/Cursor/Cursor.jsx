@@ -4,6 +4,7 @@ import styles from "./Cursor.module.css";
 const Cursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
   const [isMouseDown, setIsMouseDown] = useState(false);
+  const [isCursorPointer, setIsCursorPointer] = useState(false);
 
   useEffect(() => {
     const mouseMoveHandler = (e) => {
@@ -19,14 +20,22 @@ const Cursor = () => {
       setIsMouseDown(false);
     };
 
+    const mouseOverHandler = (e) => {
+      const isLink = e.target.nodeName === "A";
+
+      setIsCursorPointer(isLink);
+    };
+
     document.addEventListener("mousemove", mouseMoveHandler);
     document.addEventListener("mousedown", mouseDownHandler);
     document.addEventListener("mouseup", mouseUpHandler);
+    document.addEventListener("mouseover", mouseOverHandler);
 
     return () => {
       document.removeEventListener("mousemove", mouseMoveHandler);
       document.removeEventListener("mousedown", mouseDownHandler);
       document.removeEventListener("mouseup", mouseUpHandler);
+      document.removeEventListener("mouseup", mouseOverHandler);
     };
   }, []);
 
@@ -37,12 +46,12 @@ const Cursor = () => {
         style={{
           left: `${mousePosition.x - 18}px`,
           top: `${mousePosition.y - 18}px`,
-          transform: isMouseDown ? "scale(1.5)" : "scale(1)",
+          transform: isMouseDown || isCursorPointer ? "scale(1.5)" : "scale(1)",
         }}
       ></div>
 
       <div
-        className={`${styles.dot} hidden xl:block`}
+        className={`${styles.dot} ${isCursorPointer ? "hidden" : "xl:block"}`}
         style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
       ></div>
     </>
