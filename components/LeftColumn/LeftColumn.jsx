@@ -21,11 +21,15 @@ const LeftColumn = ({ spotifyData }) => {
 
         <h2 className="text-2xl">I (mostly) make websites.</h2>
 
-        <p className="text-light-gray mt-8 mb-10">
+        <p className="text-light-gray my-8">
           I&apos;m a full-stack developer equipped with the urge to turn ideas
           into exceptional digital experiences. Currently, I&apos;m focused on
           building accessible, human-centered products at Crowdpolicy.
         </p>
+
+        <div className="mb-10">
+          <Spotify track={spotifyData} />
+        </div>
 
         <NavMenu />
       </div>
@@ -67,10 +71,6 @@ const LeftColumn = ({ spotifyData }) => {
               </Link>
             </li>
           </ul>
-        </div>
-
-        <div className="mt-2">
-          <Spotify track={spotifyData} />
         </div>
       </div>
     </div>

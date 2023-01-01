@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  /* cursor: none; */
-}
-
 body {
   background-color: #000;
   color: #fff;
