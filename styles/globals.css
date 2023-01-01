@@ -3,7 +3,23 @@
 @tailwind utilities;
 
 body {
-  background-color: #000;
+  background-color: rgb(7, 7, 7);
   color: #fff;
   overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(7, 7, 7);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 3px;
 }
