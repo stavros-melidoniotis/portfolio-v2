@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 import cityworks from "../../assets/images/works/cityworks.png";
@@ -22,7 +23,18 @@ const Work = ({ title, description, technologies, thumbnail, link }) => {
   });
 
   return (
-    <div className="bg-dark-gray p-6 rounded-lg flex flex-col xl:flex-row gap-4">
+    <motion.div
+      className="bg-dark-gray p-6 rounded-lg flex flex-col xl:flex-row gap-4"
+      initial={{ opacity: 0, y: "60px" }}
+      whileInView={{ opacity: 1, y: "0px" }}
+      viewport={{
+        margin: "-200px",
+      }}
+      transition={{
+        duration: 0.7,
+        ease: "easeOut",
+      }}
+    >
       <div className="flex flex-col justify-between">
         <div>
           {link ? (
@@ -52,7 +64,7 @@ const Work = ({ title, description, technologies, thumbnail, link }) => {
         alt={title}
         className="rounded-xl object-cover w-full xl:w-[300px]"
       />
-    </div>
+    </motion.div>
   );
 };
 

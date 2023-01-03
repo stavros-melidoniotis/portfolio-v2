@@ -1,9 +1,22 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { motion } from "framer-motion";
+
 const TimelineItem = ({ title, content, date, dotContent }) => {
   return (
-    <li className="mb-12 ml-6">
+    <motion.li
+      className="mb-12 ml-6"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{
+        margin: "-190px",
+      }}
+      transition={{
+        duration: 0.7,
+        ease: "easeOut",
+      }}
+    >
       <span className="flex absolute -left-[7px] mt-5 justify-center items-center w-3 h-3 bg-orange-600 rounded-full ring-8 ring-white">
         {dotContent}
       </span>
@@ -19,7 +32,7 @@ const TimelineItem = ({ title, content, date, dotContent }) => {
           {content}
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 };
 
@@ -87,9 +100,10 @@ const Timeline = () => {
         content={
           <>
             <p className="mb-2">
-              Fast forward to 2016. This was the beginning of a very constructive period, where I got
-              to meet lots of professors with great knowledge and start my
-              programming journey. Some of the courses that I took include:
+              Fast forward to 2016. This was the beginning of a very
+              constructive period, where I got to meet lots of professors with
+              great knowledge and start my programming journey. Some of the
+              courses that I took include:
             </p>
 
             <ul className="list-disc columns-1 md:columns-2 pl-8">
