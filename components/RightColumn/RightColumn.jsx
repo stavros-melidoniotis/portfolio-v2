@@ -10,6 +10,18 @@ const RightColumn = ({ featuredProjects, snippets }) => {
       <AboutMe />
       <Works />
       <Snippets snippets={snippets} />
+
+      <footer className="mb-12 flex justify-between text-light-gray text-sm">
+        <p> Made with ❤️ and Next.js </p>
+
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          return;
+        </button>
+      </footer>
     </div>
   );
 };

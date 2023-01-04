@@ -3,7 +3,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Snippets = ({ snippets }) => {
   return (
-    <section id="snippets" className="mb-12">
+    <section id="snippets">
       <SectionTitle title="Snippets" />
 
       <ul>
