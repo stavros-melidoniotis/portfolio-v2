@@ -51,7 +51,9 @@ const Cursor = () => {
       ></div>
 
       <div
-        className={`${styles.dot} ${isCursorPointer ? "hidden" : "xl:block"}`}
+        className={`${styles.dot} ${
+          isCursorPointer ? "hidden" : " hidden xl:block"
+        }`}
         style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
       ></div>
     </>
