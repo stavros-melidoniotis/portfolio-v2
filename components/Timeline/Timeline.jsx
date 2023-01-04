@@ -139,7 +139,7 @@ const Timeline = () => {
             <p className="mb-2">
               While still studying for University I was able to land a freelance
               job at Techville, where I had the opportunity to put my knowledge
-              into practise. My main responsibilities involve the error-free
+              into practice. My main responsibilities involve the error-free
               operation of the company&apos;s website, the implementation of new
               features and the creation of backups.
             </p>
