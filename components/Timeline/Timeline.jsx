@@ -11,6 +11,7 @@ const TimelineItem = ({ title, content, date, dotContent }) => {
       whileInView={{ opacity: 1 }}
       viewport={{
         margin: "-180px",
+        once: true,
       }}
       transition={{
         duration: 0.7,

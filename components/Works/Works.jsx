@@ -29,6 +29,7 @@ const Work = ({ title, description, technologies, thumbnail, link }) => {
       whileInView={{ opacity: 1, y: "0px" }}
       viewport={{
         margin: "-180px",
+        once: true,
       }}
       transition={{
         duration: 0.7,
