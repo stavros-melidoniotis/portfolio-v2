@@ -1,7 +1,7 @@
 import Head from "next/head";
 import LeftColumn from "../components/LeftColumn/LeftColumn";
 import RightColumn from "../components/RightColumn/RightColumn";
-import Cursor from "../components/Cursor/Cursor";
+// import Cursor from "../components/Cursor/Cursor";
 
 import { getPinnedRepos, getGists } from "../lib/github";
 import { getNowPlaying } from "../lib/spotify";
@@ -14,7 +14,7 @@ export default function Home({ featuredProjects, snippets, spotify }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Cursor />
+      {/* <Cursor /> */}
 
       <main className="relative max-w-[1440px] flex flex-col lg:flex-row justify-between gap-8 mx-auto px-10">
         <div className="fixed top-0 left-0 w-full h-16 pointer-events-none bg-gradient-to-b from-black to-transparent z-20"></div>
