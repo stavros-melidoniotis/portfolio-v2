@@ -19,7 +19,7 @@ export default function Custom404() {
       </Head>
 
       <div className="max-w-[1440px] px-10 mx-auto h-screen w-screen flex flex-col justify-center items-center">
-        <div className="flex flex-col w-2/3">
+        <div className="flex flex-col md:w-2/3">
           <code className="text-4xl md:text-8xl mb-6 font-bold">
             new Error(404)
           </code>
