@@ -22,6 +22,7 @@ export default function Document() {
           content="Full-stack developer, JavaScript enthousiast, bug squasher based in Athens, Greece."
         />
         <meta property="og:image" content="/social-share.png" />
+        <meta property="og:url" content="https://melidon.dev/" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
