@@ -2,7 +2,7 @@ import FeaturedProject from "../FeaturedProject";
 
 const FeaturedProjects = ({ projects }) => {
   return (
-    <section id="home" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section id="featured-projects" className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {projects.map((project) => {
         return (
           <FeaturedProject

@@ -18,7 +18,7 @@ const NavItem = ({ to, label, index, scroll }) => {
 const NavMenu = () => {
   return (
     <nav className="flex flex-col gap-4">
-      <NavItem to="/" label="Featured projects" index="01" scroll={true} />
+      <NavItem to="#featured-projects" label="Featured projects" index="01" />
       <NavItem to="#about-me" label="About me" index="02" />
       <NavItem to="#works" label="Works" index="03" />
       <NavItem to="#snippets" label="Snippets" index="04" />
