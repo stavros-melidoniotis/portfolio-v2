@@ -99,7 +99,7 @@ const Works = () => {
       description:
         "Online tool for mapping climate change predictions in a simple and understandable way using maps and graphs.",
       technologies: ["React", "QGIS", "Geoserver", "Leaflet"],
-      link: "https://geo.adaptivegreecehub.gr/s",
+      link: "https://geo.adaptivegreecehub.gr/",
       thumbnail: adaptivegreecehub,
     },
     {
