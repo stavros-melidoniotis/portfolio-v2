@@ -14,7 +14,7 @@ const LeftColumn = ({ spotifyData }) => {
   return (
     <div className="relative lg:fixed flex flex-col lg:justify-between gap-10 xl:gap-0 w-full lg:w-1/3 lg:max-w-xl lg:h-screen pt-12 xl:pt-28 pb-20">
       <div>
-        <h1 className="text-4xl xl:text-6xl font-bold mb-4">
+        <h1 className="text-4xl xl:text-6xl font-bold mb-4 font-bricolage">
           Hello, I&apos;m <br /> Stavros Melidoniotis
           <span className={styles.wavyHand}>👋</span>
         </h1>

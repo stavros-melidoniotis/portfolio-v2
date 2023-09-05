@@ -1,5 +1,7 @@
 const SectionTitle = ({ title }) => {
-  return <h2 className="font-semibold text-lg mb-4"> {title} </h2>;
+  return (
+    <h2 className="font-semibold text-2xl mb-4 font-bricolage">{title}</h2>
+  );
 };
 
 export default SectionTitle;

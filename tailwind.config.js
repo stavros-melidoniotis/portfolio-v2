@@ -10,6 +10,9 @@ module.exports = {
         "light-gray": "#959595",
         "dark-gray": "#0c0c0c",
       },
+      fontFamily: {
+        bricolage: "bricolage",
+      },
     },
   },
   plugins: [],
