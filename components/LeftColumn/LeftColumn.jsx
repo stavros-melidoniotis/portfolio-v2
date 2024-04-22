@@ -23,8 +23,7 @@ const LeftColumn = ({ spotifyData }) => {
 
         <p className="text-light-gray my-8">
           I&apos;m a full-stack developer equipped with the urge to turn ideas
-          into exceptional digital experiences. Currently, I&apos;m focused on
-          building accessible, human-centered products at Crowdpolicy.
+          into exceptional digital experiences.
         </p>
 
         <div className="mb-10">
